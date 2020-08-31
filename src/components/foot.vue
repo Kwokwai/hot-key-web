@@ -1,7 +1,7 @@
 <template>
   <div class="foot-bottom">
       <div class="foot-content"></div>
-      <div class="foot-copyright">Copyright © 2020 Devon Govett.</div>
+      <div class="foot-copyright">Copyright © 2020 热键录 版权所有 <a href=" ">粤ICP备18055221号</a ></div>
   </div>
 </template>
 

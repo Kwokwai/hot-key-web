@@ -1,13 +1,13 @@
 <template>
   <div class="home">
     <div class="home-screen">
-      <div class="home-screen-name">HotKeySheet</div>
-      <div class="home-screen-intro">Customize Mac Menu Keyboard Shortcuts</div>
+      <div class="home-screen-name">热键录</div>
+      <div class="home-screen-intro">一款小而精简的快捷键查询工具</div>
       <div class="home-screen-download" @click="download">DownLoad</div>
     </div>
-    <div class="home-intro">
+    <div class="home-intro" :style="{backgroundImage:'url('+backgroundImg+')'}">
       <div class="home-intro-left">
-        <h3>Custom Keyboard Shortcuts</h3>
+        <h3>热键录</h3>
         <p v-for="(p, index) in introList" :key="index">{{p}}</p>
         <ul>
           <li v-for="(li, index) in liList" :key="index">{{li}}</li>
@@ -29,18 +29,18 @@ export default {
     return {
       videoSrc: "@/assets/video/demo.mp4",
       introList: [
-        "Use shortcuts that are easy to reach and easy to remember. Get your work done faster.",
-        "Use CustomShortcuts to add keyboard shortcuts to menu items in most Mac applications.",
+        "使用易于访问且易于记忆的快捷方式。更快地完成工作。",
+        "使用热键录查询热门Mac应用程序中的快捷键。",
         ""
       ],
       liList: [
-        "Assign custom keyboard shortcuts to Mac menu items",
-        "Auto-completion helps you navigate menu hierarchies",
-        "It makes sure you get menu titles exactly right",
-        "CustomShortcuts checks for ambiguous menu items",
-        "Copy & paste shortcuts between applications"
+        "将自定义键盘快捷键分配给Mac菜单项",
+        "自动补全功能可帮助您导航菜单层次结构",
+        "确保您获得正确的菜单标题",
+        "热键录检查模棱两可的菜单项",
       ],
-      introImg: require("@/assets/pics/lifetimes.png")
+      introImg: require("@/assets/pics/demo.png"),
+      backgroundImg: require('@/assets/pics/background.jpg')
     };
   },
   created() {},
@@ -120,6 +120,7 @@ export default {
   }
   &-intro {
     display: flex;
+    justify-content: space-around;
     align-items: center;
     padding: 50px;
 
@@ -141,6 +142,7 @@ export default {
 
     &-right {
       &-img {
+        filter: drop-shadow(2px 2px 10px rgba(0,0,0,.6));
         height: 512px;
       }
     }

@@ -4,6 +4,9 @@ const fetch = function (options) {
   return new Promise((resolve, reject) => {
     const headers = {
       'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'POSTGET, POST, OPTIONS, HEAD',
+      'Access-Control-Allow-Headers': 'x-requested-with,content-type'
     };
     if (options.method === 'FILE') {
       options.method = 'POST';

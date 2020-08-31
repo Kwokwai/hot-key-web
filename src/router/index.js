@@ -19,6 +19,11 @@ Vue.use(VueRouter)
     path: '/pay',
     name: 'Pay',
     component: () => import(/* webpackChunkName: "about" */ '../views/Pay.vue')
+  },
+  {
+    path: '/code',
+    name: 'Code',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Code.vue')
   }
 ]
 
